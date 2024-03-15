@@ -71,6 +71,10 @@ button{
     color: white;
 }
 
+button:hover{
+    background-color: red;
+}
+
 .d-flex{
     display: flex;
     
