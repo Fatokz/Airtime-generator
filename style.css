@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://lh3.googleusercontent.com/nTj7b_tsv4gCCwvKLlMADdPgAEJqi8kKOW6obdNR5vKFT9td4CoycQIivbj_zPhvi7ivcdHARjcVpM442I87hICFYA=s1280-w1280-h800);
+}
+
+.body {
+    height: 15em;
+    width: 350px;
+    /* background: linear-gradient(60deg, #00ffff, #FF02FF); */
+    background-color: rgba(239, 236, 236, 0.505);
+    /* margin: 13% 25% 10% 35%; */
+    margin: auto;
+    margin-top: 15%;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.loaded{
+    padding-top: 20px;
+    /* background-color: rebeccapurple; */
+}
+
+.move {
+    /* background-color: red; */
+    height: 10em;
+    width: 90%;
+    margin: 20px 15px 10px 15px;
+}
+
+#show {
+    margin: 5px;
+    height: 30px;
+    background-color: transperant;
+    /* background-color: red; */
+}
+
+.airtime {
+    height: 30px;
+    /* background-color: green; */
+    text-align: center;
+    color: rgb(114,21,99);
+    font-family: cursive;
+}
+
+select {
+    background-color:transparent;
+    height: 30px;
+    width: 33%;
+    border-radius: 5px;
+    border: 1px solid  rgb(114,21,99);
+}
+
+option{
+    background-color:#00ffff38;
+}
+
+button{
+    /* margin-top: 20px; */
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #FF02FF;
+    padding: 5px;
+    background-color: rgb(114,21,99);
+    cursor: pointer;
+    color: white;
+}
+
+.d-flex{
+    display: flex;
+    
+}
+
+::placeholder{
+    font-size: 15px;
+    color: black;
+}
+
+input{
+    background: transparent;
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid rgb(114,21,99);
+    font-size: 23px;
+    margin-right: 10px;
+}
+
+input:focus{
+    outline: 2px solid rgb(253,97,137);
+}
