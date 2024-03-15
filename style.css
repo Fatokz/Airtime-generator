@@ -73,6 +73,7 @@ button{
 
 button:hover{
     background-color: red;
+    transform: scale(1.06);
 }
 
 .d-flex{
