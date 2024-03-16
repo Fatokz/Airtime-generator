@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(https://lh3.googleusercontent.com/nTj7b_tsv4gCCwvKLlMADdPgAEJqi8kKOW6obdNR5vKFT9td4CoycQIivbj_zPhvi7ivcdHARjcVpM442I87hICFYA=s1280-w1280-h800);
+    background-image: url(background.png);
 }
 
 .body {
@@ -35,8 +35,6 @@ body {
 #show {
     margin: 5px;
     height: 30px;
-    background-color: transperant;
-    /* background-color: red; */
 }
 
 .airtime {
@@ -56,7 +54,9 @@ select {
 }
 
 option{
-    background-color:#00ffff38;
+    /* background-color:#00ffff38; */
+    background-color: rgb(223,86,136);
+    padding: 20px;
 }
 
 button{

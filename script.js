@@ -21,9 +21,9 @@ function load() {
         alert("You haven't enter your airtime yet")
     }
     else if (loadd.value.startsWith("*311*") && loadd.value.includes(airtime) &&  loadd.value.endsWith( "#")) {
-        alert(`you have successfully recharge  ${docNum.value} ${docNumb.value} airtime`)
+        alert(`Account recharge of ${docNum.value} ${docNumb.value} was successful, 1hr free on Tiktok + 1.2GB N500, Dial *406*2# to buy.`)
     } else {
-        alert("Dear customer, this pin is incorrect and your line will BARRED from the service after 5 incorrect attempts ")
+        alert("Dear customer, this pin is incorrect and your line will be BARRED from the service after 5 incorrect attempts ")
     }
     console.log(docNum.value);
     console.log(docNumb.value);
