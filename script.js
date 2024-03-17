@@ -25,6 +25,6 @@ function load() {
     } else {
         alert("Dear customer, this pin is incorrect and your line will be BARRED from the service after 5 incorrect attempts ")
     }
-    console.log(docNum.value);
-    console.log(docNumb.value);
+    console.log(docNum.value, docNumb.value);
+    // console.log(docNumb.value);
 }
