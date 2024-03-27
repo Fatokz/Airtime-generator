@@ -23,7 +23,7 @@ function generate() {
     else {
         for (let index = 1; index <= 16; index++) {
             airtime = Math.floor(Math.random() * 10)
-            out.innerHTML += airtime;
+            out.innerHTML+= airtime;
         }
         console.log(out.innerHTML);
         let date = new Date()
@@ -31,7 +31,7 @@ function generate() {
             pin: out.innerHTML,
             network: docNum.value,
             amount: docNumb.value,
-            date: `${date.toDateString()}`
+            date: `${date.toLocaleString()}`
         }
         console.log(pins);
         allPins.push(pins)
@@ -61,7 +61,8 @@ function load() {
     }
     else if (loadd.value.startsWith("*311*") && loadd.value.includes(airtime) && loadd.value.endsWith("#")) {
         alert(`Account recharge of ${docNum.value}  #${docNumb.value} was successful, 1hr free on Tiktok + 1.2GB N500, Dial *406*2# to buy.`)
-    } else {
+    }
+     else {
         alert("Dear customer, this pin is incorrect and your line will be BARRED from the service after 5 incorrect attempts ")
     }
     console.log(docNum.value, docNumb.value);
