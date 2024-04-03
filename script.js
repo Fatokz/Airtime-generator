@@ -6,7 +6,7 @@ let docNumb = document.getElementById("selectt");
 let loadd = document.getElementById("enter");
 let table = document.getElementById("shownetwork");
 let airtime;
-let allPins = [] && JSON.parse(localStorage.getItem("allpins"))
+let allPins = [] && JSON.parse(localStorage.getItem("airtime"))
 
 
 // copys.style.display = "initial"
@@ -35,6 +35,8 @@ function generate() {
             date: `${date.toLocaleString()}`,
             isUsed: false,
         }
+        
+    table.innerHTML = ''
         console.log(pins);
         allPins.push(pins)
         localStorage.setItem("airtime", JSON.stringify(allPins))
