@@ -6,7 +6,8 @@ let docNumb = document.getElementById("selectt");
 let loadd = document.getElementById("enter");
 let table = document.getElementById("shownetwork");
 let airtime;
-let allPins = []
+let allPins = [] && JSON.parse(localStorage.getItem("allpins"))
+
 
 // copys.style.display = "initial"
 // paste.style.display = "none"
@@ -31,10 +32,12 @@ function generate() {
             pin: out.innerHTML,
             network: docNum.value,
             amount: docNumb.value,
-            date: `${date.toLocaleString()}`
+            date: `${date.toLocaleString()}`,
+            isUsed: false,
         }
         console.log(pins);
         allPins.push(pins)
+        localStorage.setItem("airtime", JSON.stringify(allPins))
         console.log(allPins);
     }
 
@@ -45,16 +48,24 @@ function generate() {
         table.innerHTML += `
             <tr>
                 <td>${element.network}</td>
-                <td>${element.amount}</td>
-                <td>${element.pin}</td>
+                <td> ${element.amount}</td>
+                <td id="ccpin${index}">
+                    ${element.pin}
+                    ${'<button id="copys" onclick = "copy()"> <i class="fa-regular fa-clipboard"></i> </button>'}
+                </td>
                 <td>${element.date}</td>
-                <td>${'<button id="copys" onclick = "copy()"> <i class="fa-regular fa-clipboard"></i> </button>'}</td>
+                <td>${element.isUsed? "Been Used" : "Not Used"}</td>
             </tr>
         `
     }
 }
 
 function load() {
+    console.log(loadd.value);
+    console.log(loadd.value.slice(5, 21));
+
+    let ppin = loadd.value.slice(5, 21);
+    // let loadingPin = allPins.find((el)=> el.pin == ppin);
     console.log(airtime);
     if (loadd.value == '') {
         alert("You haven't enter your airtime yet")
@@ -69,6 +80,7 @@ function load() {
     // console.log(docNumb.value);
 }
 
-function copy() {
+function copy(i) {
+    let ccpin = document.getElementById(`ccpin${i}`)
     navigator.clipboard.writeText(out.innerText)
 }
